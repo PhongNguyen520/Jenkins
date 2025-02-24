@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwaggerTest", "SwaggerTest\SwaggerTest.csproj", "{5186B68E-2E6E-4C2E-A5AF-8C8DA6E99923}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9BFDB549-F312-4115-8DCF-8FA3C8438824}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5186B68E-2E6E-4C2E-A5AF-8C8DA6E99923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5186B68E-2E6E-4C2E-A5AF-8C8DA6E99923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5186B68E-2E6E-4C2E-A5AF-8C8DA6E99923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5186B68E-2E6E-4C2E-A5AF-8C8DA6E99923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFDB549-F312-4115-8DCF-8FA3C8438824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFDB549-F312-4115-8DCF-8FA3C8438824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFDB549-F312-4115-8DCF-8FA3C8438824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFDB549-F312-4115-8DCF-8FA3C8438824}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F3C2EE3-1A69-4714-A039-60DEA0BAC41C}
+	EndGlobalSection
+EndGlobal
