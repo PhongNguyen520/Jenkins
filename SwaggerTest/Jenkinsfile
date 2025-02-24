@@ -1,74 +1,10 @@
 ﻿pipeline {
     agent any
-
     stages {
-        // Stage để clone repository từ GitHub
-        stage('Clone') {
-            steps {
-                git 'https://github.com/PhongNguyen520/Jenkins.git'
-            }
-        }
-
-        // Stage để build ứng dụng (Ví dụ: .NET hoặc Node.js)
         stage('Build') {
             steps {
-                echo 'Building the application...'
-                // Ví dụ cho .NET hoặc Node.js
-                // Nếu là .NET:
-                // script {
-                //     bat 'dotnet build'
-                // }
-                // Nếu là Node.js:
-                // script {
-                //     bat 'npm install'
-                // }
+                 git 'https://github.com/PhongNguyen520/Jenkins.git'
             }
-        }
-
-        // Stage để chạy test (nếu có)
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                // Ví dụ cho .NET hoặc Node.js
-                // Nếu là .NET:
-                // script {
-                //     bat 'dotnet test'
-                // }
-                // Nếu là Node.js:
-                // script {
-                //     bat 'npm test'
-                // }
-            }
-        }
-
-        // Stage để deploy ứng dụng (nếu cần)
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the application...'
-                // Lệnh deploy nếu cần
-                // Ví dụ cho .NET:
-                // script {
-                //     bat 'dotnet publish'
-                // }
-                // Nếu là Node.js:
-                // script {
-                //     bat 'npm run deploy'
-                // }
-            }
-        }
-    }
-
-    post {
-        always {
-            echo 'Cleaning up after build.'
-            // Các hành động sau khi pipeline kết thúc, ví dụ:
-            // deleteDir() để dọn dẹp các tệp tạm
-        }
-        success {
-            echo 'Build succeeded!'
-        }
-        failure {
-            echo 'Build failed!'
         }
     }
 }
