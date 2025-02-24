@@ -13,10 +13,15 @@
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                // Thêm lệnh build ở đây, ví dụ:
-                // bat 'build.bat' (Windows)
-                // dotnet build (cho .NET)
-                // npm install (cho Node.js)
+                // Ví dụ cho .NET hoặc Node.js
+                // Nếu là .NET:
+                // script {
+                //     bat 'dotnet build'
+                // }
+                // Nếu là Node.js:
+                // script {
+                //     bat 'npm install'
+                // }
             }
         }
 
@@ -24,9 +29,15 @@
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // Thêm lệnh chạy test ở đây, ví dụ:
-                // dotnet test (cho .NET)
-                // npm test (cho Node.js)
+                // Ví dụ cho .NET hoặc Node.js
+                // Nếu là .NET:
+                // script {
+                //     bat 'dotnet test'
+                // }
+                // Nếu là Node.js:
+                // script {
+                //     bat 'npm test'
+                // }
             }
         }
 
@@ -34,9 +45,15 @@
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                // Thêm lệnh deploy ở đây, ví dụ:
-                // dotnet publish (cho .NET)
-                // npm run deploy (cho Node.js)
+                // Lệnh deploy nếu cần
+                // Ví dụ cho .NET:
+                // script {
+                //     bat 'dotnet publish'
+                // }
+                // Nếu là Node.js:
+                // script {
+                //     bat 'npm run deploy'
+                // }
             }
         }
     }
@@ -44,7 +61,8 @@
     post {
         always {
             echo 'Cleaning up after build.'
-            // Các hành động sau khi pipeline kết thúc, như xóa tệp tạm thời, thông báo, v.v.
+            // Các hành động sau khi pipeline kết thúc, ví dụ:
+            // deleteDir() để dọn dẹp các tệp tạm
         }
         success {
             echo 'Build succeeded!'
