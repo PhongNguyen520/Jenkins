@@ -1,10 +1,56 @@
 ﻿pipeline {
     agent any
+
     stages {
-        stage('Clone'){
+        // Stage để clone repository từ GitHub
+        stage('Clone') {
             steps {
                 git 'https://github.com/PhongNguyen520/Jenkins.git'
             }
+        }
+
+        // Stage để build ứng dụng (Ví dụ: .NET hoặc Node.js)
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                // Thêm lệnh build ở đây, ví dụ:
+                // bat 'build.bat' (Windows)
+                // dotnet build (cho .NET)
+                // npm install (cho Node.js)
+            }
+        }
+
+        // Stage để chạy test (nếu có)
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Thêm lệnh chạy test ở đây, ví dụ:
+                // dotnet test (cho .NET)
+                // npm test (cho Node.js)
+            }
+        }
+
+        // Stage để deploy ứng dụng (nếu cần)
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                // Thêm lệnh deploy ở đây, ví dụ:
+                // dotnet publish (cho .NET)
+                // npm run deploy (cho Node.js)
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Cleaning up after build.'
+            // Các hành động sau khi pipeline kết thúc, như xóa tệp tạm thời, thông báo, v.v.
+        }
+        success {
+            echo 'Build succeeded!'
+        }
+        failure {
+            echo 'Build failed!'
         }
     }
 }
