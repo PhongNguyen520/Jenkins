@@ -3,7 +3,7 @@
     stages {
         stage('Build') {
             steps {
-                 git 'https://github.com/PhongNguyen520/Jenkins.git'
+                mvn 'clean install'
             }
         }
     }
